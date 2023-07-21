@@ -8,8 +8,8 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/myrepos" element={<MyRepos />} />
-      <Route path="" element={<NotFound />} />
+      <Route path="/my-repos" element={<MyRepos />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
