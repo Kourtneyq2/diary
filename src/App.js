@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
 import { AppRoutes } from "./AppRoutes";
@@ -6,8 +6,12 @@ import { AppRoutes } from "./AppRoutes";
 export const App = () => {
   return (
     <BrowserRouter>
-      <NavigationBar />
-      <AppRoutes />
+      <Stack direction="column" gap={3}>
+        <NavigationBar />
+        <Container>
+          <AppRoutes />
+        </Container>
+      </Stack>
     </BrowserRouter>
   );
 };

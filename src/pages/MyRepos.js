@@ -1,5 +1,13 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
+import { Banner } from "../components/Banner";
 
 export const MyRepos = () => {
-  return <Stack>MyRepos</Stack>;
+  return (
+    <Stack>
+      <Banner
+        title="My Repositories"
+        subTitle="Here is a list of your saved repositories"
+      />
+    </Stack>
+  );
 };

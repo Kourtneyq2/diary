@@ -1,5 +1,10 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
+import { Banner } from "../components/Banner";
 
 export const Home = () => {
-  return <Stack>Home</Stack>;
+  return (
+    <Stack>
+      <Banner title="Github Diary" subTitle="Sub Title" />
+    </Stack>
+  );
 };

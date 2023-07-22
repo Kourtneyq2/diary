@@ -1,5 +1,9 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 
 export const Repos = () => {
-  return <Stack>Repos</Stack>;
+  return (
+    <Container>
+      <Stack>Repos</Stack>
+    </Container>
+  );
 };

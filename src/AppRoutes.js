@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { NavigationBar } from "./components/NavigationBar";
+import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { MyRepos } from "./pages/MyRepos";
 import { NotFound } from "./pages/NotFound";
