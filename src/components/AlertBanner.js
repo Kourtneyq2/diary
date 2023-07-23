@@ -1,5 +1,10 @@
-import { Stack } from "@mui/material";
+import { Alert, Stack } from "@mui/material";
 
-export const AlertBanner = () => {
-  return <Stack>AlertBanner</Stack>;
+export const AlertBanner = ({ message }) => {
+  return (
+    <Stack>
+      <Alert severity="error">{message}</Alert>
+      <Alert severity="success">Warning!</Alert>
+    </Stack>
+  );
 };

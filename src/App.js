@@ -8,7 +8,7 @@ export const App = () => {
     <BrowserRouter>
       <Stack direction="column" gap={3}>
         <NavigationBar />
-        <Container>
+        <Container gap={3}>
           <AppRoutes />
         </Container>
       </Stack>
