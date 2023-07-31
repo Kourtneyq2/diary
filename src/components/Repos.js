@@ -1,9 +1,21 @@
 import { Container, Stack } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { RepoCard } from "./RepoCard";
 
-export const Repos = () => {
+export const Repos = ({ repos }) => {
+  console.log(repos);
   return (
     <Container>
-      <Stack>Repos</Stack>
+      <Stack className="repo-card" direction="horizontal">
+        {repos.map((repo) => {
+          return <RepoCard repo={repo} />;
+        })}
+      </Stack>
     </Container>
   );
 };

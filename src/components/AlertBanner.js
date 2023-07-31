@@ -1,10 +1,9 @@
 import { Alert, Stack } from "@mui/material";
 
-export const AlertBanner = ({ message }) => {
+export const AlertBanner = ({ message, severity = "warning" }) => {
   return (
     <Stack>
-      <Alert severity="error">{message}</Alert>
-      <Alert severity="success">Warning!</Alert>
+      <Alert severity={severity}>{message}</Alert>
     </Stack>
   );
 };
