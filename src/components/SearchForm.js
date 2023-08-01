@@ -42,6 +42,7 @@ export const SearchForm = ({ title, handleSubmit }) => {
             value={formik.values.username}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            variant="contained"
           />
           {formik.touched.username && formik.errors.username && (
             <FormHelperText>{formik.errors.username}</FormHelperText>

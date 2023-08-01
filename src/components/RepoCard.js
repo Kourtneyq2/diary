@@ -7,7 +7,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { getFromLocalStorage } from "../utils/getfromlocalstorage";
-export const RepoCard = ({ repo }) => {
+import { useLocation } from "react-router-dom";
+export const RepoCard = ({ repo, setRepos }) => {
+  const location = useLocation();
+  console.log(location);
   const itemsFromLS = getFromLocalStorage("repos");
 
   const [addedToLS, setAddedToLS] = useState(
@@ -30,6 +33,10 @@ export const RepoCard = ({ repo }) => {
     localStorage.setItem("repos", JSON.stringify(newItems));
 
     setAddedToLS(false);
+
+    if (location.pathname === "/my-repos") {
+      setRepos(newItems);
+    }
   };
   return (
     <Card className="repo-card-card">
